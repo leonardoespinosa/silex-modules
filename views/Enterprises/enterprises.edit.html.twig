@@ -1,0 +1,67 @@
+{% extends 'layout.html.twig' %}
+
+{% block title 'Editar Empresa' %}
+
+{% block body %}
+
+<form class="form-horizontal" method="post" action={{ url('enterprise-save') }}>
+  <fieldset>
+
+    <!-- Titulo -->
+    <legend>Crear o Editar Empresas</legend>
+
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="textinput">Id</label>
+      <div class="col-md-4">
+        <input type="text" class="form-control input-md"
+            name="id" placeholder="Id de la empresa" required="">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="textinput">Nit</label>
+      <div class="col-md-4">
+        <input type="text" class="form-control input-md"
+            name="nit" placeholder="Nit de la empresa" required="">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="textinput">Nombre</label>
+      <div class="col-md-4">
+        <input type="text" class="form-control input-md"
+            name="nombre" placeholder="nombre de la empresa" required="">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="textinput">Direccion</label>
+      <div class="col-md-4">
+        <input type="text" class="form-control input-md"
+            name="direccion" placeholder="Direccion de la empresa" required="">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="textinput">Sitio Web</label>
+      <div class="col-md-4">
+        <input type="text" class="form-control input-md"
+            name="sitioWeb" placeholder="Sitio web de la empresa" required="">
+      </div>
+    </div>
+
+    <!-- Botones -->
+    <div class="form-group">
+      <div class="col-md-8">
+        <div class="pull-right">
+          <button class="btn btn-primary" type="submit">Guardar</button>
+          <button class="btn btn-primary" type="submit">Cancelar</button>
+        </div>
+      </div>
+    </div>
+
+  </fieldset>
+</form>
+
+
+{% endblock %}

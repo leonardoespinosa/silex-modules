@@ -74,8 +74,8 @@ class LoginController implements ControllerProviderInterface
 
       // remueve el usuario de la sesión
       $app['session']->set('user', '');
-      $app['session']->set('users', array());
-            
+      $app['session']->set('users', array());            
+      $app['session']->set('enterprises', array());
 
       // redirige el navegador a "/login"
       return $app->redirect( $app['url_generator']->generate('login'));
